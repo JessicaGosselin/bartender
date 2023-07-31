@@ -6,18 +6,10 @@
 
 <template>
 	<div>
-		<h1>Choose your Ingredient</h1>
+		<h1>Which ingredient would you fancy today?</h1>
 
 		<div class="ingredients">
 			<IngredientCard v-for="ingredient in ingredients.drinks" :name="`${ingredient.strIngredient1}`"/>
 		</div>
 	</div>
 </template>
-
-<style lang="scss">
-	.ingredients {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 30px;
-	}
-</style>

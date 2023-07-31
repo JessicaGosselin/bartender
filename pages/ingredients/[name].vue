@@ -1,21 +1,11 @@
 <script setup>
-const route = useRoute();
-
-const name = ref('');
-name.value = route.params.name.toLowerCase();
-
-const { data : ingredient } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${name.value}`);
-const test = await useFetch(`https://www.thecocktaildb.com/images/ingredients/${name.value}.png/preview`);
-
-const src = ref('');
-src.value = `https://www.thecocktaildb.com/images/ingredients/${name.value}.png`;
-
-
+	const route = useRoute();
+	const { data : ingredient } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${route.params.name}`);
 </script>
 
 <template>
 	<div>
 		<h1>{{ route.params.name }}</h1>
-		<img :src="src"/>
+		<img :src="`https://www.thecocktaildb.com/images/ingredients/${route.params.name}.png`"/>
 	</div>
 </template>

@@ -26,4 +26,10 @@
 			max-width: 100%;
 		}
 	}
+
+	h1:not(.card-title) {
+		font-family: Lobster;
+		font-size: 50px;
+		text-align: center;
+	}
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<nav>
-			<NuxtLink to="/">Home</NuxtLink>
+			<NuxtLink to="/">Cocktails</NuxtLink>
 			<NuxtLink to="/ingredients">Ingredients</NuxtLink>
 		</nav>
 		<main>

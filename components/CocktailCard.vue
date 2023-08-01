@@ -5,7 +5,7 @@
 <template>
 	<div>
 		<NuxtLink :to="`/cocktails/${id}`">
-			<h1>{{ name }}</h1>
+			<h1 class="card-title">{{ name }}</h1>
 			<img :src="image"/>
 		</NuxtLink>
 	</div>

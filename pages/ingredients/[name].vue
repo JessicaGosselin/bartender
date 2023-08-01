@@ -4,8 +4,10 @@
 </script>
 
 <template>
-	<div>
-		<h1>{{ route.params.name }}</h1>
+	<div class="single-ingredient">
 		<img :src="`https://www.thecocktaildb.com/images/ingredients/${route.params.name}.png`"/>
+		<div>
+			<h1>{{ route.params.name }}</h1>
+		</div>
 	</div>
 </template>

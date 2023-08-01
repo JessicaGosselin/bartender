@@ -1,24 +1,44 @@
 <template>
-	<div>
+	<header>
 		<nav>
 			<NuxtLink to="/">Cocktails</NuxtLink>
 			<NuxtLink to="/ingredients">Ingredients</NuxtLink>
 		</nav>
-		<main>
-			<slot />
-		</main>
-	</div>
+	</header>
+	<main>
+		<slot />
+	</main>
 </template>
 
-<style>
+<style lang="scss">
+
+	header {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		display: flex;
+		justify-content: center;
+		background-color: #7b5942;
+		position: sticky;
+		top: 0;
+	}
+
 	nav {
 		display: flex;
-		gap: 15px;
+		gap: 50px;
+		a {
+			text-decoration: none;
+			font-size: 20px;
+			color: white;
+		}
 	}
 	main,
 	nav {
 		max-width: 1400px;
 		margin: 0 auto;
+	}
+
+	main {
+		padding-block: 40px;
 	}
 
 </style>

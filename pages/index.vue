@@ -15,6 +15,7 @@
 <style lang="scss">
 	body {
 		background-color: #fbf6e1;
+		margin: 0;
 	}
 
 	.ingredients,
@@ -27,9 +28,16 @@
 		}
 	}
 
+	.single-cocktail,
+	.single-ingredient {
+		display: flex;
+		gap: 40px;
+	}
+
 	h1:not(.card-title) {
 		font-family: Lobster;
 		font-size: 50px;
 		text-align: center;
+		margin-top: 0;
 	}
 </style>

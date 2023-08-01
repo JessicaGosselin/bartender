@@ -29,6 +29,9 @@
 			text-decoration: none;
 			font-size: 20px;
 			color: white;
+			&.router-link-active {
+				text-decoration: underline;
+			}
 		}
 	}
 	main,

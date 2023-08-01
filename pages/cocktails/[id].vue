@@ -21,6 +21,8 @@
 			<ul>
 				<li v-for="ingredient in ingredients">{{ ingredient }}</li>
 			</ul>
+			<h2>Instructions</h2>
+			<div>{{ drink.strInstructions }}</div>
 		</div>
 	</div>
 </template>

@@ -36,7 +36,7 @@
 	}
 	main,
 	nav {
-		max-width: 1400px;
+		max-width: min(1400px, 90vw);
 		margin: 0 auto;
 	}
 

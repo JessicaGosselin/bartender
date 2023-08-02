@@ -1,6 +1,6 @@
 <script setup>
-	const route = useRoute();
-	const { data : cocktail } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${route.params.id}`);
+	const id = useRoute().params.id;
+	const { data : cocktail } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
 	const drink = ref(cocktail.value.drinks[0]);
 	const ingredients = ref([]);
 	for (let i = 1; i <= 15; i++) {

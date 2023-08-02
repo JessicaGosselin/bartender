@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div>
+	<div class="cocktail-card">
 		<NuxtLink :to="`/cocktails/${id}`">
 			<h1 class="card-title">{{ name }}</h1>
 			<img :src="image"/>

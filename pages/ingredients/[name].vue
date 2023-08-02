@@ -1,6 +1,6 @@
 <script setup>
 	const name = useRoute().params.name;
-	const { data } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${name}`);
+	const { data } = await useFetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' + name);
 	const ingredient = ref(data.value.ingredients[0]);
 </script>
 

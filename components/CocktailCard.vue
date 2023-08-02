@@ -1,12 +1,12 @@
 <script setup>
-	const { name, image, id } = defineProps(['name', 'image', 'id']);
+	const { cocktail } = defineProps(['cocktail']);
 </script>
 
 <template>
-	<div class="cocktail-card">
-		<NuxtLink :to="`/cocktails/${id}`">
-			<h1 class="card-title">{{ name }}</h1>
-			<img :src="image"/>
+	<div class="cocktail-card card">
+		<NuxtLink :to="`/cocktails/${cocktail.idDrink}`">
+			<h1 class="card-title">{{ cocktail.strDrink }}</h1>
+			<img class="card-image" :src="cocktail.strDrinkThumb"/>
 		</NuxtLink>
 	</div>
 </template>

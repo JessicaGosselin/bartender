@@ -6,7 +6,7 @@
 	<div>
 		<h1>What would you like to drink?</h1>
 		<div class="cocktails">
-			<CocktailCard v-for="cocktail in cocktails.drinks" :name="cocktail.strDrink" :image="cocktail.strDrinkThumb" :id="cocktail.idDrink"/>
+			<CocktailCard v-for="cocktail in cocktails.drinks" :cocktail="cocktail" />
 		</div>
 	</div>
 </template>

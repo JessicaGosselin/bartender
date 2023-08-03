@@ -11,22 +11,47 @@
 </script>
 
 <template>
-	<div class="cocktail-filters">
-		<NuxtLink v-for="letter in alphabet" :to="`/cocktails/by-first-letter/${letter}`">{{ letter }}</NuxtLink>
-	</div>
-	<form @submit.prevent="search">
-		<input type="text" v-model="query" />
-		<button>Have a specific cocktail in mind?</button>
+	<div class="filters-wrapper">
+		<div class="letter-filters">
+			<NuxtLink v-for="letter in alphabet" :to="`/cocktails/by-first-letter/${letter}`">{{ letter }}</NuxtLink>
+		</div>
+		<form @submit.prevent="search" class="search">
+			<label>Have a specific cocktail in mind?</label>
+			<input type="text" v-model="query" />
+			<button>Search</button>
+		</form>
 		<div v-if="searchedCocktails" class="cocktails">
 			<CocktailCard v-for="cocktail in searchedCocktails" :cocktail="cocktail"/>
 		</div>
-	</form>
-	
+	</div>
 </template>
 
 <style lang="scss">
-	.cocktail-filters {
+	.filters-wrapper {
 		display: flex;
-		gap: 5px;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 25px;
+		.letter-filters {
+			display: flex;
+			gap: 10px;
+			a {
+				color: black;
+			}
+			a.router-link-active {
+				font-weight: bold;
+			}
+		}
+		.search {
+			display: flex;
+			label {
+				font-weight: bold;
+				margin-right: 10px;
+			}
+			input {
+				margin-right: 2px;
+			}
+		}
 	}
 </style>

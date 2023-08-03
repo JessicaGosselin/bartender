@@ -2,7 +2,7 @@
 	<header>
 		<nav>
 			<NuxtLink to="/">Home</NuxtLink>
-			<NuxtLink to="/cocktails">Cocktails</NuxtLink>
+			<NuxtLink to="/cocktails/by-first-letter/0-9">Cocktails</NuxtLink>
 			<NuxtLink to="/ingredients">Ingredients</NuxtLink>
 		</nav>
 	</header>

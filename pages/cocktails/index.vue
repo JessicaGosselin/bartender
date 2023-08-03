@@ -1,21 +1,12 @@
 <script setup>
-	
-	const cocktails = ref([]);
-
-	for (let i = 1; i <= 8; i++) {
-		let { data : random } = await useFetch('https://www.thecocktaildb.com/api/json/v1/1/random.php', {
-			key: 'random-' + i
-		});
-		cocktails.value.push(random.value.drinks[0]);
-	}
-
+	const { data : cocktails } = await useFetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`);
 </script>
 
 <template>
 	<div>
 		<h1>What would you like to drink?</h1>
 		<div class="cocktails">
-			<CocktailCard v-for="cocktail in cocktails" :cocktail="cocktail" />
+			<CocktailCard v-for="cocktail in cocktails.drinks" :cocktail="cocktail" />
 		</div>
 	</div>
 </template>

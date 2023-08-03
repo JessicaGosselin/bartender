@@ -27,7 +27,6 @@
 		display: flex;
 		gap: 50px;
 		a {
-			text-decoration: none;
 			font-size: 20px;
 			color: white;
 			&.router-link-active {
@@ -43,6 +42,10 @@
 
 	main {
 		padding-block: 40px;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 </style>

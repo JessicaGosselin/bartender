@@ -12,11 +12,10 @@
 </script>
 
 <template>
-	<div>
+	<div class="home">
 		<h1 class="page-title">What would you like to drink?</h1>
-		<div class="cocktails">
-			<CocktailCard v-for="cocktail in cocktails" :cocktail="cocktail" />
-		</div>
+		<CocktailFilters/>
+		<CocktailList :cocktails="cocktails"/>
 	</div>
 </template>
 
@@ -29,11 +28,15 @@
 	.ingredients,
 	.cocktails {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		gap: 30px;
 		img {
 			max-width: 100%;
 		}
+	}
+
+	.home .cocktails {
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	.single-cocktail,

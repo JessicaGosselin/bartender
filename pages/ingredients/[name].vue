@@ -7,7 +7,7 @@
 <template>
 	<div class="single-ingredient">
 		<img :src="`https://www.thecocktaildb.com/images/ingredients/${name}.png`"/>
-		<div>
+		<div class="single-content">
 			<h1>{{ name }}</h1>
 			<div class="type">Type : {{ ingredient.strType }}</div>
 			<div class="alcoholic">Alcoholic? : {{ ingredient.strAlcohol }}</div>

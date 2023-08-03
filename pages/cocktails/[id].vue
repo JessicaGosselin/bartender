@@ -7,7 +7,7 @@
 		let measure = cocktail.value['strMeasure' + i];
 		let ingredient = cocktail.value['strIngredient' + i];
 		if (ingredient) {
-			ingredients.value.push((measure) ? measure + ' ' + ingredient : ingredient);
+			ingredients.value.push({'name': ingredient, 'measure': measure});
 		}
 	}
 </script>
@@ -15,12 +15,10 @@
 <template>
 	<div class="single-cocktail">
 		<img :src="cocktail.strDrinkThumb"/>
-		<div>
+		<div class="single-content">
+			<button @click="$router.go(-1)">Go back</button>
 			<h1>{{ cocktail.strDrink }}</h1>
-			<h2>You will need:</h2>
-			<ul>
-				<li v-for="ingredient in ingredients">{{ ingredient }}</li>
-			</ul>
+			<CocktailIngredients :ingredients="ingredients"/>
 			<h2>Instructions</h2>
 			<div>{{ cocktail.strInstructions }}</div>
 		</div>

@@ -37,21 +37,52 @@
 
 	.home .cocktails {
 		grid-template-columns: repeat(4, 1fr);
+		.cocktail-card {
+			.card-title {
+				font-size: 24px;
+			}
+		}
 	}
 
 	.single-cocktail,
 	.single-ingredient {
 		display: flex;
 		gap: 40px;
+		img {
+			object-fit: cover;
+		}
+		.single-content {
+			width: 100%;
+		}
 	}
 
 	.card {
 		a {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			align-items: center;
+			text-align: center;
 			text-decoration: none;
 		}	
 		h1 {
-			color: brown;
+			color: white;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: center;
+			text-align: center;
+			margin: 0;
+			line-height: 1.2;
+			font-size: 22px;
+			padding-block: 10px;
+			background-color: #7b5942;
 		}
+	}
+
+	.ingredient-card .card-image {
+		margin-top: 15px;
 	}
 
 	.page-title {

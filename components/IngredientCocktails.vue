@@ -18,7 +18,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 5px;
 			text-align: center;
 			color: brown;
 			img {

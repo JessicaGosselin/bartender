@@ -20,6 +20,11 @@
 </template>
 
 <style lang="scss">
+
+	* {
+		box-sizing: border-box;
+	}
+
 	body {
 		background-color: #fbf6e1;
 		margin: 0;
@@ -48,8 +53,9 @@
 	.single-ingredient {
 		display: flex;
 		gap: 40px;
+		align-items: flex-start;
 		img {
-			object-fit: cover;
+			object-fit: contain;
 		}
 		.single-content {
 			width: 100%;
@@ -64,14 +70,14 @@
 			align-items: center;
 			text-align: center;
 			text-decoration: none;
-			background-color: #7b5942;
+			
 		}	
 		h1 {
 			color: white;
 			flex-grow: 1;
 			display: flex;
 			align-items: center;
-			width: 100%;
+			min-width: 100%;
 			justify-content: center;
 			text-align: center;
 			margin: 0;
@@ -79,7 +85,7 @@
 			font-size: 22px;
 			padding: 10px 5px;
 			max-width: fit-content;
-			
+			background-color: #7b5942;
 		}
 	}
 

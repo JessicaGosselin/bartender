@@ -13,7 +13,7 @@
 
 <template>
 	<div>
-		<h1>What would you like to drink?</h1>
+		<h1 class="page-title">What would you like to drink?</h1>
 		<div class="cocktails">
 			<CocktailCard v-for="cocktail in cocktails" :cocktail="cocktail" />
 		</div>
@@ -42,7 +42,16 @@
 		gap: 40px;
 	}
 
-	h1:not(.card-title) {
+	.card {
+		a {
+			text-decoration: none;
+		}	
+		h1 {
+			color: brown;
+		}
+	}
+
+	.page-title {
 		font-family: Lobster;
 		font-size: 50px;
 		text-align: center;

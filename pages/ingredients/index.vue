@@ -4,7 +4,7 @@
 
 <template>
 	<div>
-		<h1>Which ingredient would you fancy today?</h1>
+		<h1 class="page-title">Which ingredient would you fancy today?</h1>
 		<div class="ingredients">
 			<IngredientCard v-for="ingredient in ingredients.drinks" :name="`${ingredient.strIngredient1}`"/>
 		</div>

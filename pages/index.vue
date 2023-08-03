@@ -64,6 +64,7 @@
 			align-items: center;
 			text-align: center;
 			text-decoration: none;
+			background-color: #7b5942;
 		}	
 		h1 {
 			color: white;
@@ -76,8 +77,9 @@
 			margin: 0;
 			line-height: 1.2;
 			font-size: 22px;
-			padding-block: 10px;
-			background-color: #7b5942;
+			padding: 10px 5px;
+			max-width: fit-content;
+			
 		}
 	}
 

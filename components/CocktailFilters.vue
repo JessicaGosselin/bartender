@@ -1,12 +1,12 @@
 <script setup>
 	const query = ref('');
-	const searchedCocktails = ref([]);
+	const emit = defineEmits(['updateCocktails']);
 	let alphabet = [...Array(26)].map((_, i) => String.fromCharCode(i + 65));
 	alphabet.unshift('0-9');
 
 	async function search() {
 		const { data } = await useFetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + query.value);
-		searchedCocktails.value = data.value.drinks;
+		emit('updateCocktails', data.value.drinks);
 	}
 </script>
 
@@ -20,9 +20,6 @@
 			<input type="text" v-model="query" />
 			<button>Search</button>
 		</form>
-		<div v-if="searchedCocktails" class="cocktails">
-			<CocktailCard v-for="cocktail in searchedCocktails" :cocktail="cocktail"/>
-		</div>
 	</div>
 </template>
 

@@ -9,12 +9,16 @@
 		cocktails.value.push(random.value.drinks[0]);
 	}
 
+	function updateCocktails(searchedCocktails) {
+		cocktails.value = searchedCocktails;
+    }
+
 </script>
 
 <template>
 	<div class="home">
 		<h1 class="page-title">What would you like to drink?</h1>
-		<CocktailFilters/>
+		<CocktailFilters @updateCocktails="updateCocktails"/>
 		<CocktailList :cocktails="cocktails"/>
 	</div>
 </template>
